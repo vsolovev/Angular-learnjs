@@ -3,20 +3,10 @@
         mat-icon-button
         aria-label="Example icon-button with menu icon"
         class="example-icon"
-        (click)="onClick($event); $event.stopPropagation()"
+        (click)="onClick()"
     >
-        <!--
-        (click)="onClick($event); $event.stopPropagation()"
-            |
-            V
-        button.addEventListener('click', ($event) => {
-            onClick($event);
-            $event.stopPropagation()
-        })
-     -->
         <mat-icon>menu</mat-icon>
     </button>
-    <!-- <img src="{{imgSrc}}" class="shop-icon"> -->
     <img alt="shop-icon" class="shop-icon" [src]="imgSrc" />
     <span>{{ title }}</span>
     <span class="example-spacer"></span>
