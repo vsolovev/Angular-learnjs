@@ -6,15 +6,15 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./rate.component.css'],
 })
 export class RateComponent {
-    @Input() rate: any | undefined;
+    @Input() rate: any | undefined; // Just to simplify, should be interface here
 
-    rateCount() {
+    rateCount(): number[] {
         const rateFloor = Math.floor(this.rate?.rate);
 
         return [...new Array(rateFloor).keys()];
     }
 
-    shouldAddHalf() {
+    shouldAddHalf(): boolean {
         return this.rate.rate > Math.floor(this.rate?.rate);
     }
 }
